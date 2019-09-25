@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap');
+
+/*CAGeheimagent*/
+@font-face {
+    font-family: 'CAGeheimagent';
+    src: url('../fonts/cageheimagentregular.eot');
+    src: url('../fonts/cageheimagentregular.woff') format('woff'),
+        url('../fonts/cageheimagentregular.svg') format('svg'),
+        url('../fonts/cageheimagentregular.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'CAGeheimagent';
+    src: url('../fonts/cageheimagentitalic.eot');
+    src: url('../fonts/cageheimagentitalic.woff') format('woff'),
+        url('../fonts/cageheimagentitalic.svg') format('svg'),
+        url('../fonts/cageheimagentitalic.otf') format('opentype');
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'CAGeheimagent';
+    src: url('../fonts/cageheimagentbold.eot');
+    src: url('../fonts/cageheimagentbold.woff') format('woff'),
+        url('../fonts/cageheimagentbold.svg') format('svg'),
+        url('../fonts/cageheimagentbold.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'CAGeheimagent';
+    src: url('../fonts/cageheimagentbolditalic.eot');
+    src: url('../fonts/cageheimagentbolditalic.woff') format('woff'),
+        url('../fonts/cageheimagentbolditalic.svg') format('svg'),
+        url('../fonts/cageheimagentbolditalic.otf') format('opentype');
+    font-weight: 700;
+    font-style: italic;
+}

@@ -32,23 +32,15 @@
 
 html, body {
     font-family: $fuente-principal;
-    color: $color-negro;
-    background-color: $color-blanco;
-    font-size: 1rem;
-    line-height: 1.5rem;
-    height: 100%;
-    overflow: auto;
+    color: $color-blanco;
+    background-color: $color-negro;
+    font-size: .96rem;
+    line-height: 1.4rem;
     -webkit-overflow-scrolling: touch;
-    @media (min-width: $md) {
-        height: 100%;
-    }
-}
-
-.site-wrapper {
-    position: relative;
-    z-index: 1;
-    @media (min-width: $md) {
-        height: 100%;
+    
+    @media (min-width: $lg) {
+        font-size: 1.25rem;
+        line-height: 1.6rem;
     }
 }
 
@@ -61,3 +53,133 @@ html, body {
 /*--------------------------------------------------------------
 5.0 GENERAL
 --------------------------------------------------------------*/
+
+.site-wrapper {
+    position: relative;
+    z-index: 1;
+    min-height: 100vh;
+    background-image: url(../images/rockola-mobile-bk-500.jpg);
+    background-size: cover;
+    background-position: bottom;
+
+    @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-resolution: 240dpi) {
+        background-image: url(../images/rockola-mobile-bk.jpg);
+        background-size: cover;
+      }
+
+    @media (min-width: $md) {
+        height: 100vh;
+        background-image: url(../images/rockola-desktop-bk.jpg);
+        background-size: cover;
+    }
+
+    //degradado
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        display: block;
+        z-index: 2;
+        /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#191919+0,232323+50,000000+100&0.47+0,0.38+50,0+100 */
+        background: -moz-linear-gradient(top, rgba(25,25,25,0.47) 0%, rgba(35,35,35,0.38) 50%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(top, rgba(25,25,25,0.47) 0%,rgba(35,35,35,0.38) 50%,rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom, rgba(25,25,25,0.47) 0%,rgba(35,35,35,0.38) 50%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#78191919', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
+        @media (min-width: $md) {
+            background: transparent;
+        }
+    }
+}//.site-wrapper
+
+.site-header {
+    position: relative;
+    z-index: 111;
+    padding: 55px $paddingLeftRight 0;
+    @media (min-width: $md) {
+        padding: 18vh $paddingLeftRightMD 9vh;
+    }
+    @media (min-width: $xlg) {
+        padding: 18vh $paddingLeftRightXLG 9vh;
+    }
+
+    h1 {
+        font-size: 60px;
+        line-height: 90px;
+        font-family: $fuente-especial;
+        text-transform: uppercase;
+        @include box-shadow(0 3px 6px rgba(0, 0, 0, 0.16));
+        @media (min-width: $md) {
+            font-size: 130px;
+            line-height: 90px;
+            margin-bottom: 35px;
+        }
+    }
+
+    h2 {
+        font-size: 30px;
+        line-height: 28px;
+        font-family: $fuente-secundaria;
+        text-transform: uppercase;
+        @include box-shadow(0 3px 6px rgba(0, 0, 0, 0.16));
+        @media (min-width: $md) {
+            font-size: 40px;
+            line-height: 40px;
+            width: 380px;
+        }
+    }
+}//.site-header
+
+.instrucciones {
+    position: relative;
+    z-index: 111;
+    padding: 30px $paddingLeftRight 0;
+    @media (min-width: $md) {
+        padding: 0 $paddingLeftRightMD;
+    }
+    @media (min-width: $xlg) {
+        padding: 0 $paddingLeftRightXLG;
+    }
+    
+    li {
+        position: relative;
+        padding-left: 36px;
+        margin: 26px 0;
+
+        &:before {
+            content: '';
+            display: block;
+            position: absolute;
+            top: -5px;
+            left: 0;
+            width: 34px;
+            height: 34px;
+            background-image: url(../images/numero1.svg);
+                background-size: 34px 34px;
+        }
+
+        &:last-child {
+            &:before {
+                background-image: url(../images/numero2.svg);
+                background-size: 34px 34px;
+            }
+        }
+    }//li
+
+    
+
+    h3 {
+        text-transform: uppercase;
+        font-weight: 700;
+    }
+
+    
+}//.instrucciones
+
+
+.wrapper-rockola {
+    position: relative;
+    z-index: 11;
+}//.wrapper-rockola

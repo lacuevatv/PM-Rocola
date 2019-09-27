@@ -1,0 +1,396 @@
+@charset "UTF-8";
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+1.0 Reset
+2.0 Fuentes
+3.0 VARIABLES
+4.0 ANIMACIONES
+5.0 GENERAL
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+1.0 Reset
+--------------------------------------------------------------*/
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+  clear: both;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a, a:hover {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+/*para ocultar texto y que lo lean los lectores de no videntes*/
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+/*para eliminar los float*/
+header, section, footer, aside {
+  clear: both;
+}
+
+/*imagen al 100% de ancho responsive*/
+.image-responsive {
+  width: 100%;
+  height: auto;
+}
+
+/*input al 100%*/
+input, select {
+  display: block;
+  width: 100%;
+}
+
+/*elimina el diseño por defecto en el iphone*/
+input[type=submit] {
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+}
+
+/*--------------------------------------------------------------
+2.0 Fuentes
+--------------------------------------------------------------*/
+@font-face {
+  font-family: "Chesterpress Clean";
+  src: url("../fonts/chesterpress-clean.eot");
+  src: url("../fonts/chesterpress-clean.woff") format("woff"), url("../fonts/chesterpress-clean.svg") format("svg"), url("../fonts/chesterpress-clean.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Chesterpress Distressed";
+  src: url("../fonts/chesterpress-distressed.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+/*
+@font-face {
+    font-family: 'CAGeheimagent';
+    src: url('../fonts/ca-geheimagent-regular.eot');
+    src: url('../fonts/ca-geheimagent-regular.woff') format('woff'),
+        url('../fonts/ca-geheimagent-regular.svg') format('svg'),
+        url('../fonts/ca-geheimagent-regular.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'CAGeheimagent';
+    src: url('../fonts/ca-geheimagent-italic.eot');
+    src: url('../fonts/ca-geheimagent-italic.woff') format('woff'),
+        url('../fonts/ca-geheimagent-italic.svg') format('svg'),
+        url('../fonts/ca-geheimagent-italic.otf') format('opentype');
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'CAGeheimagent';
+    src: url('../fonts/ca-geheimagent-bold.eot');
+    src: url('../fonts/ca-geheimagent-bold.woff') format('woff'),
+        url('../fonts/ca-geheimagent-bold.svg') format('svg'),
+        url('../fonts/ca-geheimagent-bold.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}*/
+/*--------------------------------------------------------------
+3.0 variables
+--------------------------------------------------------------*/
+/*FUENTES*/
+/*COLORES*/
+/*GRID OPTIONS*/
+@media (min-width: 565px) {
+  .mob-only {
+    display: none;
+  }
+}
+
+.xs-only {
+  display: none;
+}
+@media (min-width: 565px) {
+  .xs-only {
+    display: block;
+  }
+}
+@media (min-width: 768px) {
+  .xs-only {
+    display: none;
+  }
+}
+
+.sm-only {
+  display: none;
+}
+@media (min-width: 768px) {
+  .sm-only {
+    display: block;
+  }
+}
+@media (min-width: 992px) {
+  .sm-only {
+    display: none;
+  }
+}
+
+.md-only {
+  display: none;
+}
+@media (min-width: 992px) {
+  .md-only {
+    display: block;
+  }
+}
+
+/*--------------------------------------------------------------
+4.0 General
+--------------------------------------------------------------*/
+html, body {
+  font-family: "Roboto", sans-serif;
+  color: #fff;
+  background-color: #000;
+  font-size: 0.96rem;
+  line-height: 1.4rem;
+  -webkit-overflow-scrolling: touch;
+}
+@media (min-width: 1200px) {
+  html, body {
+    font-size: 1.25rem;
+    line-height: 1.6rem;
+  }
+}
+
+/*--------------------------------------------------------------
+4.0 ANIMACIONES
+--------------------------------------------------------------*/
+.animate-slide-up {
+  opacity: 0;
+  animation-name: slide-up;
+  animation-duration: 1s;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(50%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+/*--------------------------------------------------------------
+5.0 GENERAL
+--------------------------------------------------------------*/
+.site-wrapper {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+  background-image: url(../images/rockola-mobile-bk-500.jpg);
+  background-size: cover;
+  background-position: bottom;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-resolution: 240dpi) {
+  .site-wrapper {
+    background-image: url(../images/rockola-mobile-bk.jpg);
+    background-size: cover;
+  }
+}
+@media (min-width: 992px) {
+  .site-wrapper {
+    height: 100vh;
+    background-image: url(../images/rockola-desktop-bk.jpg);
+    background-size: cover;
+  }
+}
+.site-wrapper::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: block;
+  z-index: 2;
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#191919+0,232323+50,000000+100&0.47+0,0.38+50,0+100 */
+  background: -moz-linear-gradient(top, rgba(25, 25, 25, 0.47) 0%, rgba(35, 35, 35, 0.38) 50%, rgba(0, 0, 0, 0) 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, rgba(25, 25, 25, 0.47) 0%, rgba(35, 35, 35, 0.38) 50%, rgba(0, 0, 0, 0) 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, rgba(25, 25, 25, 0.47) 0%, rgba(35, 35, 35, 0.38) 50%, rgba(0, 0, 0, 0) 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#78191919", endColorstr="#00000000",GradientType=0 );
+  /* IE6-9 */
+}
+@media (min-width: 992px) {
+  .site-wrapper::after {
+    background: transparent;
+  }
+}
+
+.site-header {
+  position: relative;
+  z-index: 111;
+  padding: 55px 35px 0;
+}
+@media (min-width: 992px) {
+  .site-header {
+    padding: 18vh 10% 9vh;
+  }
+}
+@media (min-width: 1600px) {
+  .site-header {
+    padding: 18vh 15% 9vh;
+  }
+}
+.site-header h1 {
+  font-size: 60px;
+  line-height: 90px;
+  font-family: "Chesterpress Distressed", "Roboto", sans-serif;
+  text-transform: uppercase;
+  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  -moz-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  -ms-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+}
+@media (min-width: 992px) {
+  .site-header h1 {
+    font-size: 130px;
+    line-height: 90px;
+    margin-bottom: 35px;
+  }
+}
+.site-header h2 {
+  font-size: 30px;
+  line-height: 28px;
+  font-family: "Chesterpress Clean", "Roboto", sans-serif;
+  text-transform: uppercase;
+  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  -moz-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  -ms-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+}
+@media (min-width: 992px) {
+  .site-header h2 {
+    font-size: 40px;
+    line-height: 40px;
+    width: 380px;
+  }
+}
+
+.instrucciones {
+  position: relative;
+  z-index: 111;
+  padding: 30px 35px 0;
+}
+@media (min-width: 992px) {
+  .instrucciones {
+    padding: 0 10%;
+  }
+}
+@media (min-width: 1600px) {
+  .instrucciones {
+    padding: 0 15%;
+  }
+}
+.instrucciones li {
+  position: relative;
+  padding-left: 36px;
+  margin: 26px 0;
+}
+.instrucciones li:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -5px;
+  left: 0;
+  width: 34px;
+  height: 34px;
+  background-image: url(../images/numero1.svg);
+  background-size: 34px 34px;
+}
+.instrucciones li:last-child:before {
+  background-image: url(../images/numero2.svg);
+  background-size: 34px 34px;
+}
+.instrucciones h3 {
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.wrapper-rockola {
+  position: relative;
+  z-index: 11;
+}
+
+/*# sourceMappingURL=style.css.map */

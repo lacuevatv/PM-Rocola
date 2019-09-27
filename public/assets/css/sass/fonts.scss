@@ -1,42 +1,54 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
 
-/*CAGeheimagent*/
 @font-face {
-    font-family: 'CAGeheimagent';
-    src: url('../fonts/cageheimagentregular.eot');
-    src: url('../fonts/cageheimagentregular.woff') format('woff'),
-        url('../fonts/cageheimagentregular.svg') format('svg'),
-        url('../fonts/cageheimagentregular.otf') format('opentype');
+    font-family: 'Chesterpress Clean';
+    src: url('../fonts/chesterpress-clean.eot');
+    src: url('../fonts/chesterpress-clean.woff') format('woff'),
+        url('../fonts/chesterpress-clean.svg') format('svg'),
+        url('../fonts/chesterpress-clean.ttf') format('truetype');
     font-weight: 400;
     font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Chesterpress Distressed';
+    src: url('../fonts/chesterpress-distressed.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+/*
+@font-face {
+    font-family: 'CAGeheimagent';
+    src: url('../fonts/ca-geheimagent-regular.eot');
+    src: url('../fonts/ca-geheimagent-regular.woff') format('woff'),
+        url('../fonts/ca-geheimagent-regular.svg') format('svg'),
+        url('../fonts/ca-geheimagent-regular.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'CAGeheimagent';
-    src: url('../fonts/cageheimagentitalic.eot');
-    src: url('../fonts/cageheimagentitalic.woff') format('woff'),
-        url('../fonts/cageheimagentitalic.svg') format('svg'),
-        url('../fonts/cageheimagentitalic.otf') format('opentype');
+    src: url('../fonts/ca-geheimagent-italic.eot');
+    src: url('../fonts/ca-geheimagent-italic.woff') format('woff'),
+        url('../fonts/ca-geheimagent-italic.svg') format('svg'),
+        url('../fonts/ca-geheimagent-italic.otf') format('opentype');
     font-weight: 400;
     font-style: italic;
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'CAGeheimagent';
-    src: url('../fonts/cageheimagentbold.eot');
-    src: url('../fonts/cageheimagentbold.woff') format('woff'),
-        url('../fonts/cageheimagentbold.svg') format('svg'),
-        url('../fonts/cageheimagentbold.otf') format('opentype');
+    src: url('../fonts/ca-geheimagent-bold.eot');
+    src: url('../fonts/ca-geheimagent-bold.woff') format('woff'),
+        url('../fonts/ca-geheimagent-bold.svg') format('svg'),
+        url('../fonts/ca-geheimagent-bold.otf') format('opentype');
     font-weight: 700;
     font-style: normal;
-}
-
-@font-face {
-    font-family: 'CAGeheimagent';
-    src: url('../fonts/cageheimagentbolditalic.eot');
-    src: url('../fonts/cageheimagentbolditalic.woff') format('woff'),
-        url('../fonts/cageheimagentbolditalic.svg') format('svg'),
-        url('../fonts/cageheimagentbolditalic.otf') format('opentype');
-    font-weight: 700;
-    font-style: italic;
-}
+    font-display: swap;
+}*/

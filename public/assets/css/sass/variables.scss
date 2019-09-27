@@ -1,24 +1,23 @@
 /*FUENTES*/
 $fuente-principal: 'Roboto', sans-serif;
-$fuente-secundaria: 'CAGeheimagent', $fuente-principal;
+$fuente-secundaria: 'Chesterpress Clean', $fuente-principal;
+$fuente-especial: 'Chesterpress Distressed', $fuente-principal;
+//$fuente-sexta: 'CAGeheimagent', $fuente-principal;
 
 /*COLORES*/
 $color-blanco: #fff;
-$color-negro: #111212;
-$color-gris: #3e3e3e;
-$color-gris2: #707070;
-$color-gris-fondo:#F8F8F8;
-$color-rojo-fondo:#ff2638;
-$color-rojo-btn:$color-rojo-fondo;
-
+$color-negro: #000;
+$color-naranja1: #EB5C24;
+$color-naranja2: #F07E23;
+$color-fondo:$color-negro;
 
 $transitionSpeed: 500ms;
 $transitionSpeedx2: 800ms;
 
-$paddingLeftRight: 36px;
-$paddingLeftRightMD: 75px;
-$paddingLeftRightLG: 175px;
-$paddingLeftRightXLG: 266px;
+$paddingLeftRight: 35px;
+$paddingLeftRightMD: 10%;
+$paddingLeftRightLG: 10%;
+$paddingLeftRightXLG: 15%;
 
 /*GRID OPTIONS*/
 $xs: 565px; //<576px

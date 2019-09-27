@@ -106,15 +106,12 @@ html, body {
     }
 
     h1 {
-        font-size: 60px;
-        line-height: 90px;
-        font-family: $fuente-especial;
-        text-transform: uppercase;
-        @include box-shadow(0 3px 6px rgba(0, 0, 0, 0.16));
-        @media (min-width: $md) {
-            font-size: 130px;
-            line-height: 90px;
-            margin-bottom: 35px;
+        img {
+            width: 160px;
+            @include box-shadow(0 3px 6px rgba(0, 0, 0, 0.16));
+            @media (min-width: $md) {
+                width: 337px;
+            }
         }
     }
 
@@ -156,13 +153,13 @@ html, body {
             left: 0;
             width: 34px;
             height: 34px;
-            background-image: url(../images/numero1.svg);
+            background-image: url(../images/numero1.png);
                 background-size: 34px 34px;
         }
 
         &:last-child {
             &:before {
-                background-image: url(../images/numero2.svg);
+                background-image: url(../images/numero2.png);
                 background-size: 34px 34px;
             }
         }

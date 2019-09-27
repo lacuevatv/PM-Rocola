@@ -121,13 +121,13 @@ button {
   font-style: normal;
   font-display: swap;
 }
-@font-face {
-  font-family: "Chesterpress Distressed";
-  src: url("../fonts/chesterpress-distressed.ttf") format("truetype");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
+/*@font-face {
+    font-family: 'Chesterpress Distressed';
+    src: url('../fonts/chesterpress-distressed.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}*/
 /*
 @font-face {
     font-family: 'CAGeheimagent';
@@ -313,21 +313,16 @@ html, body {
     padding: 18vh 15% 9vh;
   }
 }
-.site-header h1 {
-  font-size: 60px;
-  line-height: 90px;
-  font-family: "Chesterpress Distressed", "Roboto", sans-serif;
-  text-transform: uppercase;
+.site-header h1 img {
+  width: 160px;
   -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
   -moz-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
   -ms-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
 }
 @media (min-width: 992px) {
-  .site-header h1 {
-    font-size: 130px;
-    line-height: 90px;
-    margin-bottom: 35px;
+  .site-header h1 img {
+    width: 337px;
   }
 }
 .site-header h2 {
@@ -376,11 +371,11 @@ html, body {
   left: 0;
   width: 34px;
   height: 34px;
-  background-image: url(../images/numero1.svg);
+  background-image: url(../images/numero1.png);
   background-size: 34px 34px;
 }
 .instrucciones li:last-child:before {
-  background-image: url(../images/numero2.svg);
+  background-image: url(../images/numero2.png);
   background-size: 34px 34px;
 }
 .instrucciones h3 {

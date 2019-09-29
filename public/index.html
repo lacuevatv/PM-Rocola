@@ -49,16 +49,106 @@
 
         <div class="wrapper-rockola">
             <div class="background-rockola">
-                <div class="image-rockola">
-                    <img src="assets/images/rocola-contorno.png" alt="Fondo Rockola">    
+                <div class="image-rockola">  
+                    <picture>
+                        <source srcset="assets/images/rocola-contorno.png 1x" media="(min-width: 992px)">
+                        <source srcset="assets/images/rocola-contorno-mobile-411.png 1x, assets/images/rocola-contorno-mobile.png 2x" media="(min-width: 300px)">
+                        <img src="assets/images/rocola-contorno.png" alt="Fondo Rockola">
+                    </picture> 
                 </div>
             </div>
             <div class="inner-rockola">
                 <div class="content1">
-                    contenido
+                    <div class="my-flipster">
+                        <ul>
+                            <li>
+                                <a class="cover" href="#" target="_blank">
+                                    <picture>
+                                        <source srcset="assets/images/cover-rock-400.png 1x" media="(min-width: 769px)">
+                                        <source srcset="assets/images/cover-rock-200.png 1x" media="(min-width: 300px)">
+                                        <img src="assets/images/cover-rock-400.png" alt="Cover rock">
+                                    </picture>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="cover" href="#" target="_blank">
+                                    <picture>
+                                        <source srcset="assets/images/cover-jazz-400.png 1x" media="(min-width: 769px)">
+                                        <source srcset="assets/images/cover-jazz-200.png 1x" media="(min-width: 300px)">
+                                        <img src="assets/images/cover-jazz-400.png" alt="Cover Jazz">
+                                    </picture>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="cover" href="#" target="_blank">
+                                    <picture>
+                                        <source srcset="assets/images/cover-punk-400.png 1x" media="(min-width: 769px)">
+                                        <source srcset="assets/images/cover-punk-200.png 1x" media="(min-width: 300px)">
+                                        <img src="assets/images/cover-punk-400.png" alt="Cover Punk">
+                                    </picture>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="cover" href="#" target="_blank">
+                                    <picture>
+                                        <source srcset="assets/images/cover-heavy-400.png 1x" media="(min-width: 769px)">
+                                        <source srcset="assets/images/cover-heavy-200.png 1x" media="(min-width: 300px)">
+                                        <img src="assets/images/cover-heavy-400.png" alt="Cover heavy">
+                                    </picture>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
                 <div class="content2">
-                    contenido 2
+                    <ul class="buttons-rockola">
+                        <li>
+                            <a href="0" title="Rock n' Roll" class="button-rockola">
+                                <span class="title">
+                                    Rock n' Roll
+                                </span>
+                                <figure class="deco-image">
+                                    <img src="assets/images/">
+                                </figure>
+                                <span class="degradado"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="1" title="Jazz" class="button-rockola">
+                                <span class="title">
+                                    Jazz
+                                </span>
+                                <figure class="deco-image">
+                                    <img src="assets/images/">
+                                </figure>
+                                <span class="degradado"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="2" title="Punk" class="button-rockola">
+                                <span class="title">
+                                    Punk
+                                </span>
+                                <figure class="deco-image">
+                                    <img src="assets/images/">
+                                </figure>
+                                <span class="degradado"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="3" title="Heavy Metal" class="button-rockola">
+                                <span class="title">
+                                    Heavy Metal
+                                </span>
+                                <figure class="deco-image">
+                                    <img src="assets/images/">
+                                </figure>
+                                <span class="degradado"></span>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <hr class="separador-bottom">
                 </div>
             </div>
         </div><!--//.wrapper-rockola-->

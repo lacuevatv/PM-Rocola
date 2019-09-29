@@ -194,6 +194,13 @@ html, body {
     .background-rockola {
         position: relative;
         z-index: 1;
+        width: 120%;
+        left: -11%;
+
+        @media (min-width: $sm) {
+            width: 100%;
+            left: 0;
+        }
 
         .image-rockola {
             img {
@@ -212,21 +219,200 @@ html, body {
         height: 100%;
 
         .content1 {
-            width: 55%;
-            height: 32%;
+            width: 52%;
+            height: 29%;
             position: absolute;
-            background-color: rgba(0,255,0,0.4);
-            bottom: 38%;
-            left: 23%;
+            bottom: 50%;
+            left: 25%;
+            overflow: hidden;
+            @media (min-width: $md) {
+                bottom: 38%;
+            }
         }
+
+        .my-flipster {
+            height: 100%;
+
+            .flipster__container {
+                height: 100%!important;
+                display: flex;
+                display: -o-flex;
+                display: -ms-flex;
+                display: -moz-flex;
+                display: -webkit-flex;
+                -webkit-align-items: center;
+                -moz-align-items: center;
+                -ms-align-items: center;
+                -o-align-items: center;
+                align-items: center;
+            }
+
+            .cover {
+                display: block;
+            }
+        }
+
+        .flipster__item--current {
+            &:after {
+                content: '';
+                display: block;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 20px;
+                height: 20px;
+                width: 35px;
+                height: 35px;
+                background-image: url(../images/play-btn.svg);
+                background-size: cover;
+                @include transform(translate(-50%,-50%));
+                cursor: pointer;
+            }
+
+            img {
+                transform: scale(1.3);
+            }
+        }        
+        
+        
         .content2 {
             left: 23%;
             width: 55%;
-            height: 27%;
+            height: 47%;
             position: absolute;
-            bottom: 10%;
-            background-color: rgba(255,0,0,0.4);
+            bottom: 3%;
+            overflow: hidden;
+
+            @media (min-width: $md) {
+                height: 27%;
+                bottom: 10%;
+            }
         }
+
+        .buttons-rockola {
+            @media (min-width: $md) {
+                display: flex;
+                display: -o-flex;
+                display: -ms-flex;
+                display: -moz-flex;
+                display: -webkit-flex;
+                -webkit-align-items: center;
+                -moz-align-items: center;
+                -ms-align-items: center;
+                -o-align-items: center;
+                align-items: center;
+                -webkit-justify-content: center;
+                -moz-justify-content: center;
+                -ms-justify-content: center;
+                -o-justify-content: center;
+                justify-content: center;
+                padding: 10px;
+            }
+
+            li {
+                margin: 15px auto;
+                width: 90%;
+
+                @media (min-width: $md) {
+                    width: 20%;
+                }
+            }
+        }//.buttons-rockola
+
+        .button-rockola {
+            position: relative;
+            z-index: 1;
+            display: block;
+            overflow: hidden;
+            height: 50px;
+            width: 100%;
+            background-image: linear-gradient(180deg, $color-naranja1, $color-naranja2);
+            display: flex;
+            display: -o-flex;
+            display: -ms-flex;
+            display: -moz-flex;
+            display: -webkit-flex;
+            -webkit-align-items: center;
+            -moz-align-items: center;
+            -ms-align-items: center;
+            -o-align-items: center;
+            align-items: center;
+
+            @media (min-width: $md) {
+                -webkit-flex-direction: column-reverse;
+                -moz-flex-direction: column-reverse;
+                -ms-flex-direction: column-reverse;
+                -o-flex-direction: column-reverse;
+                flex-direction: column-reverse;
+                width: 100%;
+                background-color: $color-naranja1;
+                height: 70px;
+            }
+            @media (min-width: $xlg) {
+                height: 120px;
+            }
+            
+            .title {
+                position: relative;
+                z-index: 1;
+                display: block;
+                width: 70%;
+                font-family: $fuente-secundaria;
+                font-size: 20px;
+                line-height: 20px;
+                text-transform: uppercase;
+                padding: 0 10px;
+                text-align: center;
+                @media (min-width: $md) {
+                    padding: 0 5px;
+                    font-size: 11px;
+                    line-height: 13px;
+                    width: 100%;
+                    background-image: linear-gradient(180deg, $color-naranja1, $color-naranja2);
+                }
+                @media (min-width: $xlg) {
+                    font-size: 15px;
+                    line-height: 15px;
+                    padding: 5px 5px 5px;
+                }
+            }
+
+            .deco-image {
+                position: relative;
+                z-index: 1;
+                width: 30%;
+                height: 100%;
+                overflow: hidden;
+                
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+            }//.deco-image
+
+        }//.button-rockola
+
+        .button-rockola-active {
+            .degradado {
+                position: absolute;
+                z-index: 11;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                background-color: rgba(0,0,0,0.4);
+            }
+        }
+
+        .separador-bottom {
+            @media (min-width: $md) {
+                width: 90%;
+                margin: 0 auto;
+                border: none;
+                height: 2px;
+                @include box-shadow(0 3px 6px rgba(0,0,0,0.5));
+            }
+        } 
 
     }//.inner-rockola
 

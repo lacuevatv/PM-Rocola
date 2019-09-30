@@ -284,7 +284,7 @@
             }
 
             img {
-                transform: scale(1.7);
+                @include transform(scale(1.7));
             }
         }        
         
@@ -371,6 +371,10 @@
             @media (min-width: $xlg) {
                 height: 90px;
             }
+
+            &:active {
+                @include transform(scale(0.9));
+            }
             
             .title {
                 position: relative;
@@ -405,7 +409,6 @@
                 overflow: hidden;
                 @media (min-width: $md) {
                     width: 100%;
-                    height: auto;
                 }
             }//.deco-image
 

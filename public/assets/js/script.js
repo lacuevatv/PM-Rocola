@@ -15,5 +15,24 @@ $(window).on('load', function(){
         
         var myFlister = $('.my-flipster');
         myFlister.flipster('jump', parseInt(href) );
+
+        //agrega la clase active y elimina las restantes
+        cleanActivesBtn(this);
     });
 });
+
+function cleanActivesBtn(el) {
+    var actives = $('.button-rockola-active');
+
+    if (actives.length > 0) {
+        actives.each(function(){
+            $(this).removeClass('button-rockola-active');
+        });
+    }
+    
+    setTimeout(function(){
+        $(el).addClass('button-rockola-active');
+    }, 100);
+    
+    
+}

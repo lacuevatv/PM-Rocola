@@ -27,24 +27,6 @@
 @import 'sass/variables';
 
 /*--------------------------------------------------------------
-4.0 General
---------------------------------------------------------------*/
-
-html, body {
-    font-family: $fuente-principal;
-    color: $color-blanco;
-    background-color: $color-negro;
-    font-size: .96rem;
-    line-height: 1.4rem;
-    -webkit-overflow-scrolling: touch;
-    
-    @media (min-width: $lg) {
-        font-size: 1.25rem;
-        line-height: 1.6rem;
-    }
-}
-
-/*--------------------------------------------------------------
 4.0 ANIMACIONES
 --------------------------------------------------------------*/
 
@@ -55,6 +37,13 @@ html, body {
 --------------------------------------------------------------*/
 
 .site-wrapper {
+    font-family: $fuente-principal;
+    color: $color-blanco;
+    background-color: $color-negro;
+    font-size: .96rem;
+    line-height: 1.4rem;
+    -webkit-overflow-scrolling: touch;
+    overflow-x: hidden;
     position: relative;
     z-index: 1;
     min-height: 100vh;
@@ -72,7 +61,10 @@ html, body {
         background-image: url(../images/rockola-desktop-bk.jpg);
         background-size: cover;
         overflow: hidden;
+        font-size: 1.25rem;
+        line-height: 1.6rem;
     }
+    
 
     //degradado
     &::after {
@@ -102,6 +94,9 @@ html, body {
     @media (min-width: $md) {
         padding: 18vh $paddingLeftRightMD 9vh;
         width: 50%;
+    }
+    @media (min-width: $lg) {
+        padding: 18vh $paddingLeftRightLG 9vh;
     }
     @media (min-width: $xlg) {
         padding: 18vh $paddingLeftRightXLG 9vh;
@@ -181,11 +176,14 @@ html, body {
     position: relative;
     z-index: 11;
     @media (min-width: $md) {
-        width: 45%;
+        width: 55%;
         max-width: 800px;
         position: absolute;
         right: 40px;
         bottom: -10px;
+    }
+    @media (min-width: $lg) {
+        width: 45%;
     }
     @media (min-width: $xlg) {
         right: 70px;
@@ -253,20 +251,23 @@ html, body {
         }
 
         .flipster__item--current {
-            &:after {
-                content: '';
-                display: block;
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                width: 20px;
-                height: 20px;
-                width: 35px;
-                height: 35px;
-                background-image: url(../images/play-btn.svg);
-                background-size: cover;
-                @include transform(translate(-50%,-50%));
-                cursor: pointer;
+
+            a {
+                &:after {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    width: 20px;
+                    height: 20px;
+                    width: 35px;
+                    height: 35px;
+                    background-image: url(../images/play-btn.svg);
+                    background-size: cover;
+                    @include transform(translate(-50%,-50%));
+                    cursor: pointer;
+                }
             }
 
             img {
@@ -284,6 +285,7 @@ html, body {
             overflow: hidden;
 
             @media (min-width: $md) {
+                width: 57%;
                 height: 27%;
                 bottom: 10%;
             }
@@ -316,6 +318,9 @@ html, body {
                 @media (min-width: $md) {
                     width: 20%;
                 }
+                @media (min-width: $xlg) {
+                    margin: 35px auto 15px;
+                }
             }
         }//.buttons-rockola
 
@@ -337,6 +342,7 @@ html, body {
             -ms-align-items: center;
             -o-align-items: center;
             align-items: center;
+            @include transition(all $transitionSpeed);
 
             @media (min-width: $md) {
                 -webkit-flex-direction: column-reverse;
@@ -345,11 +351,12 @@ html, body {
                 -o-flex-direction: column-reverse;
                 flex-direction: column-reverse;
                 width: 100%;
-                background-color: $color-naranja1;
+                background-color: transparent;
                 height: 70px;
+                background-image: none;
             }
             @media (min-width: $xlg) {
-                height: 120px;
+                height: 90px;
             }
             
             .title {
@@ -364,7 +371,7 @@ html, body {
                 padding: 0 10px;
                 text-align: center;
                 @media (min-width: $md) {
-                    padding: 0 5px;
+                    padding: 5px;
                     font-size: 11px;
                     line-height: 13px;
                     width: 100%;
@@ -383,24 +390,30 @@ html, body {
                 width: 30%;
                 height: 100%;
                 overflow: hidden;
-                
-                img {
+                @media (min-width: $md) {
                     width: 100%;
                     height: auto;
                 }
             }//.deco-image
 
-        }//.button-rockola
-
-        .button-rockola-active {
             .degradado {
+                @include transition(all $transitionSpeed);
+                opacity: 0;
                 position: absolute;
                 z-index: 11;
                 width: 100%;
                 height: 100%;
-                top: 0;
+                bottom: 0;
                 left: 0;
                 background-color: rgba(0,0,0,0.4);
+            }
+
+        }//.button-rockola
+
+        .button-rockola-active {
+            .degradado {
+                @include transition(all $transitionSpeed);
+                opacity: 1;
             }
         }
 

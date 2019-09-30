@@ -211,24 +211,6 @@ button {
 }
 
 /*--------------------------------------------------------------
-4.0 General
---------------------------------------------------------------*/
-html, body {
-  font-family: "Roboto", sans-serif;
-  color: #fff;
-  background-color: #000;
-  font-size: 0.96rem;
-  line-height: 1.4rem;
-  -webkit-overflow-scrolling: touch;
-}
-@media (min-width: 1200px) {
-  html, body {
-    font-size: 1.25rem;
-    line-height: 1.6rem;
-  }
-}
-
-/*--------------------------------------------------------------
 4.0 ANIMACIONES
 --------------------------------------------------------------*/
 .animate-slide-up {
@@ -253,6 +235,13 @@ html, body {
 5.0 GENERAL
 --------------------------------------------------------------*/
 .site-wrapper {
+  font-family: "Roboto", sans-serif;
+  color: #fff;
+  background-color: #000;
+  font-size: 0.96rem;
+  line-height: 1.4rem;
+  -webkit-overflow-scrolling: touch;
+  overflow-x: hidden;
   position: relative;
   z-index: 1;
   min-height: 100vh;
@@ -272,6 +261,8 @@ html, body {
     background-image: url(../images/rockola-desktop-bk.jpg);
     background-size: cover;
     overflow: hidden;
+    font-size: 1.25rem;
+    line-height: 1.6rem;
   }
 }
 .site-wrapper::after {
@@ -306,8 +297,13 @@ html, body {
 }
 @media (min-width: 992px) {
   .site-header {
-    padding: 18vh 10% 9vh;
+    padding: 18vh 5% 9vh;
     width: 50%;
+  }
+}
+@media (min-width: 1200px) {
+  .site-header {
+    padding: 18vh 10% 9vh;
   }
 }
 @media (min-width: 1600px) {
@@ -352,7 +348,7 @@ html, body {
 }
 @media (min-width: 992px) {
   .instrucciones {
-    padding: 0 10%;
+    padding: 0 5%;
     width: 60%;
   }
 }
@@ -392,11 +388,16 @@ html, body {
 }
 @media (min-width: 992px) {
   .wrapper-rockola {
-    width: 45%;
+    width: 55%;
     max-width: 800px;
     position: absolute;
     right: 40px;
     bottom: -10px;
+  }
+}
+@media (min-width: 1200px) {
+  .wrapper-rockola {
+    width: 45%;
   }
 }
 @media (min-width: 1600px) {
@@ -460,7 +461,7 @@ html, body {
 .wrapper-rockola .inner-rockola .my-flipster .cover {
   display: block;
 }
-.wrapper-rockola .inner-rockola .flipster__item--current:after {
+.wrapper-rockola .inner-rockola .flipster__item--current a:after {
   content: "";
   display: block;
   position: absolute;
@@ -491,6 +492,7 @@ html, body {
 }
 @media (min-width: 992px) {
   .wrapper-rockola .inner-rockola .content2 {
+    width: 57%;
     height: 27%;
     bottom: 10%;
   }
@@ -524,6 +526,11 @@ html, body {
     width: 20%;
   }
 }
+@media (min-width: 1600px) {
+  .wrapper-rockola .inner-rockola .buttons-rockola li {
+    margin: 35px auto 15px;
+  }
+}
 .wrapper-rockola .inner-rockola .button-rockola {
   position: relative;
   z-index: 1;
@@ -542,6 +549,10 @@ html, body {
   -ms-align-items: center;
   -o-align-items: center;
   align-items: center;
+  -webkit-transition: all 500ms;
+  -moz-transition: all 500ms;
+  -ms-transition: all 500ms;
+  transition: all 500ms;
 }
 @media (min-width: 992px) {
   .wrapper-rockola .inner-rockola .button-rockola {
@@ -551,13 +562,14 @@ html, body {
     -o-flex-direction: column-reverse;
     flex-direction: column-reverse;
     width: 100%;
-    background-color: #EB5C24;
+    background-color: transparent;
     height: 70px;
+    background-image: none;
   }
 }
 @media (min-width: 1600px) {
   .wrapper-rockola .inner-rockola .button-rockola {
-    height: 120px;
+    height: 90px;
   }
 }
 .wrapper-rockola .inner-rockola .button-rockola .title {
@@ -574,7 +586,7 @@ html, body {
 }
 @media (min-width: 992px) {
   .wrapper-rockola .inner-rockola .button-rockola .title {
-    padding: 0 5px;
+    padding: 5px;
     font-size: 11px;
     line-height: 13px;
     width: 100%;
@@ -595,18 +607,32 @@ html, body {
   height: 100%;
   overflow: hidden;
 }
-.wrapper-rockola .inner-rockola .button-rockola .deco-image img {
-  width: 100%;
-  height: auto;
+@media (min-width: 992px) {
+  .wrapper-rockola .inner-rockola .button-rockola .deco-image {
+    width: 100%;
+    height: auto;
+  }
 }
-.wrapper-rockola .inner-rockola .button-rockola-active .degradado {
+.wrapper-rockola .inner-rockola .button-rockola .degradado {
+  -webkit-transition: all 500ms;
+  -moz-transition: all 500ms;
+  -ms-transition: all 500ms;
+  transition: all 500ms;
+  opacity: 0;
   position: absolute;
   z-index: 11;
   width: 100%;
   height: 100%;
-  top: 0;
+  bottom: 0;
   left: 0;
   background-color: rgba(0, 0, 0, 0.4);
+}
+.wrapper-rockola .inner-rockola .button-rockola-active .degradado {
+  -webkit-transition: all 500ms;
+  -moz-transition: all 500ms;
+  -ms-transition: all 500ms;
+  transition: all 500ms;
+  opacity: 1;
 }
 @media (min-width: 992px) {
   .wrapper-rockola .inner-rockola .separador-bottom {

@@ -528,7 +528,8 @@ button {
 }
 @media (min-width: 1600px) {
   .wrapper-rockola .inner-rockola .buttons-rockola li {
-    margin: 35px auto 15px;
+    width: 22%;
+    margin: 40px auto 15px;
   }
 }
 .wrapper-rockola .inner-rockola .button-rockola {

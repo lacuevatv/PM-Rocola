@@ -7,6 +7,14 @@ $(window).on('load', function(){
         nav: false,
         buttons: false,
         loop: true,
+        //hace que a medida que se desliza se marque en los botones de abajo
+        onItemSwitch: function(currentItem, previousItem) {
+            var index = parseInt($(currentItem).attr('data-index'));
+            
+            var btns = $('.button-rockola');
+            
+            cleanActivesBtn(btns[index]);
+        }
     });
 
     $('.button-rockola').click(function(e){
@@ -21,6 +29,7 @@ $(window).on('load', function(){
     });
 });
 
+//busca todos los botones activos y le quita la marca de activo y luego marca la que actualmente esta activa.
 function cleanActivesBtn(el) {
     var actives = $('.button-rockola-active');
 

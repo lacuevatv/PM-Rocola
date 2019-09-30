@@ -373,7 +373,7 @@
             }
 
             &:active {
-                @include transform(scale(0.9));
+                @include transform(scale(0.8));
             }
             
             .title {

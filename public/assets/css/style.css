@@ -352,6 +352,11 @@ button {
     width: 60%;
   }
 }
+@media (min-width: 1200px) {
+  .instrucciones {
+    padding: 0 10%;
+  }
+}
 @media (min-width: 1600px) {
   .instrucciones {
     padding: 0 15%;
@@ -385,6 +390,10 @@ button {
 .wrapper-rockola {
   position: relative;
   z-index: 11;
+  /*@media (min-width: $md) and (min-height: 720px) {
+      top: initial;
+      bottom: -10px;
+  }*/
 }
 @media (min-width: 992px) {
   .wrapper-rockola {
@@ -403,6 +412,12 @@ button {
 @media (min-width: 1600px) {
   .wrapper-rockola {
     right: 70px;
+  }
+}
+@media (max-height: 720px) {
+  .wrapper-rockola {
+    bottom: initial;
+    top: 0;
   }
 }
 .wrapper-rockola .background-rockola {
@@ -480,7 +495,7 @@ button {
   cursor: pointer;
 }
 .wrapper-rockola .inner-rockola .flipster__item--current img {
-  transform: scale(1.3);
+  transform: scale(1.7);
 }
 .wrapper-rockola .inner-rockola .content2 {
   left: 23%;

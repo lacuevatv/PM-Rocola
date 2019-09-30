@@ -134,6 +134,9 @@
         padding: 0 $paddingLeftRightMD;
         width: 60%;
     }
+    @media (min-width: $lg) {
+        padding: 0 $paddingLeftRightLG;
+    }
     @media (min-width: $xlg) {
         padding: 0 $paddingLeftRightXLG;
     }
@@ -182,11 +185,21 @@
         right: 40px;
         bottom: -10px;
     }
+    /*@media (min-width: $md) and (min-height: 720px) {
+        top: initial;
+        bottom: -10px;
+    }*/
     @media (min-width: $lg) {
         width: 45%;
     }
     @media (min-width: $xlg) {
         right: 70px;
+    }
+
+    @media (max-height: 720px) {
+        bottom: initial;
+        top: 0;
+        
     }
 
     .background-rockola {
@@ -271,10 +284,9 @@
             }
 
             img {
-                transform: scale(1.3);
+                transform: scale(1.7);
             }
         }        
-        
         
         .content2 {
             left: 23%;

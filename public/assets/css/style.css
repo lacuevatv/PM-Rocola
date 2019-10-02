@@ -484,8 +484,8 @@ button {
   left: 50%;
   width: 20px;
   height: 20px;
-  width: 35px;
-  height: 35px;
+  width: 50px;
+  height: 50px;
   background-image: url(../images/play-btn.svg);
   background-size: cover;
   -webkit-transform: translate(-50%, -50%);
@@ -669,6 +669,14 @@ button {
     -ms-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.5);
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.5);
   }
+}
+
+.tidal-wrapper {
+  position: relative;
+  z-index: 11;
+}
+.tidal-wrapper .tidal-embed {
+  min-height: 200px;
 }
 
 /*# sourceMappingURL=style.css.map */

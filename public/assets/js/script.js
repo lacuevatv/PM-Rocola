@@ -27,6 +27,24 @@ $(window).on('load', function(){
         //agrega la clase active y elimina las restantes
         cleanActivesBtn(this);
     });
+
+    $(document).on('click', '.cover', function(){
+        event.preventDefault();
+        var wrapper = $('.tidal-wrapper');
+        $(wrapper).empty()
+
+        var idList = $(this).attr('href');
+        var html = '<div class="tidal-embed" data-type="p" data-id="'+idList+'"></div>';
+        
+        $(wrapper).append($(html));
+
+        $('body').append( $('<script src="https://embed.tidal.com/tidal-embed.js"></script>') );
+
+       setTimeout(function(){
+        scrollToID('.tidal-wrapper');
+       }, 1000);
+        
+    });
 });
 
 //busca todos los botones activos y le quita la marca de activo y luego marca la que actualmente esta activa.
@@ -44,4 +62,10 @@ function cleanActivesBtn(el) {
     }, 100);
     
     
+}
+
+function scrollToID ( id ) {
+    $('html, body').stop().animate({
+        scrollTop: $(id).offset().top -90
+    }, 'slow');
 }

@@ -45,6 +45,20 @@ $(window).on('load', function(){
        }, 1000);
         
     });
+
+    /*
+     *pone la lista de rock por defecto
+     */
+    /*var html = '<div class="tidal-embed" data-type="p" data-id="94fe2b9b-096d-4b39-8129-d5b8e774e9b3"></div>';
+        
+    $('.tidal-wrapper').append($(html));
+
+    $('body').append( $('<script src="https://embed.tidal.com/tidal-embed.js"></script>') );
+
+    setTimeout(function(){
+    scrollToID('.tidal-wrapper');
+    }, 1000);
+    */
 });
 
 //busca todos los botones activos y le quita la marca de activo y luego marca la que actualmente esta activa.

@@ -409,12 +409,18 @@ button {
     width: 45%;
   }
 }
+@media (min-width: 1200px) and (max-height: 740px) {
+  .wrapper-rockola {
+    bottom: initial;
+    top: 0;
+  }
+}
 @media (min-width: 1600px) {
   .wrapper-rockola {
     right: 70px;
   }
 }
-@media (max-height: 720px) {
+@media (min-width: 1600px) and (max-height: 910px) {
   .wrapper-rockola {
     bottom: initial;
     top: 0;

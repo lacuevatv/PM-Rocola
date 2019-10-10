@@ -192,15 +192,20 @@
     @media (min-width: $lg) {
         width: 45%;
     }
+    @media (min-width: $lg) and (max-height: 740px) {
+        bottom: initial;
+        top: 0;  
+    }
     @media (min-width: $xlg) {
         right: 70px;
     }
 
-    @media (max-height: 720px) {
+    @media (min-width: $xlg) and (max-height: 910px) {
         bottom: initial;
-        top: 0;
-        
+        top: 0;  
     }
+
+    
 
     .background-rockola {
         position: relative;

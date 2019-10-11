@@ -28,7 +28,7 @@ $(window).on('load', function(){
         //agrega la clase active y elimina las restantes
         cleanActivesBtn(this);
         
-        openTidal(idList);
+        openTidal(idList, true);
     });
 
     $(document).on('click', '.cover', function(){
@@ -37,14 +37,14 @@ $(window).on('load', function(){
 
         var idList = $(this).attr('href');
         
-        openTidal(idList);
+        openTidal(idList, true);
         
     });
 
     /*
      *pone la lista de rock por defecto
      */
-    //openTidal('94fe2b9b-096d-4b39-8129-d5b8e774e9b3');
+    openTidal('94fe2b9b-096d-4b39-8129-d5b8e774e9b3');
     
 });
 
@@ -71,7 +71,7 @@ function scrollToID ( id ) {
     }, 'slow');
 }
 
-function openTidal(idList) {
+function openTidal(idList, scroll) {
     var wrapper = $('.tidal-wrapper');
     $(wrapper).empty()
 
@@ -81,7 +81,9 @@ function openTidal(idList) {
 
     $('body').append( $('<script src="https://embed.tidal.com/tidal-embed.js"></script>') );
 
-    setTimeout(function(){
-    scrollToID('.tidal-wrapper');
-    }, 1000);
+    if (scroll) {
+        setTimeout(function(){
+        scrollToID('.tidal-wrapper');
+        }, 1000);
+    }
 }
